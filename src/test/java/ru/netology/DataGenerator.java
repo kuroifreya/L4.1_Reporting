@@ -40,6 +40,11 @@ public class DataGenerator {
         return faker.phoneNumber().phoneNumber();
     }
 
+    public static String generateWrongPhone(String locale){
+        Faker faker = new Faker(new Locale(locale));
+        return faker.numerify("####");
+    }
+
     public static UserInfo generateUser(String locale) {
         // TODO: добавить логику для создания пользователя user с использованием методов generateCity(locale),
 
